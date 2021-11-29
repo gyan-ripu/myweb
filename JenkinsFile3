@@ -22,7 +22,7 @@ pipeline {
                     sh """
                            scp -o StrictHostKeyChecking=no target/myweb.war centos@65.1.1.164:/opt/tomcat8/webapps/
                            ssh centos@65.1.1.164 /opt/tomcat8/bin/shutdown.sh
-                           ssh centos@65.1.1.164 /opt/tomcat8/startup.sh
+                           ssh centos@65.1.1.164 /opt/tomcat8/bin/startup.sh
                     
                     """
                 }

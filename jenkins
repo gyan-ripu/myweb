@@ -1,9 +1,13 @@
 pipeline{
     agent any
+    
+    environment{
+          PATH = "/opt/maven3/bin:$PATH"
+    }
     stages{
-        stage(""){
+        stage("Maven Build"){
            steps{
-          
+               sh "mvn clean package"
           }
         }
     }
